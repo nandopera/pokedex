@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: rgb( 255, 247, 218);
+    background-color: rgb(45, 30, 40);
+    display: flex;
+    justify-content: flex-start; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    /* height: 100vh; /* Define a altura da div para ocupar toda a altura da viewport */
+}
+
+header {
+    background-color: white;
+    width: 100%;
+}
+
+.content {
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: rgba(255, 201, 0, 0.1);
+    width: 400px;
+    height: 50vh;
+}
