@@ -1,4 +1,4 @@
-# <p style="text-align: center;">Pokedex</p>
+# Pokedex
 
 ![PokéAPI](https://pokeapi.co/static/pokeapi_256.3fa72200.png)
 
