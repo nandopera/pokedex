@@ -11,7 +11,7 @@
     flex-direction: column;
     margin: .5rem;
     padding: 1.2rem 1rem;
-    background-color: #46D1B1;
+    background-color: #41c4a5;
     border-radius: 1rem;
 }
 
@@ -25,6 +25,7 @@
     margin-bottom: 0.25rem;
     color: rgb( 255, 247, 218);
     font-size: 1rem;
+    text-transform: capitalize;
 }
 
 .pokemon .detail {
@@ -41,7 +42,7 @@
 }
 
 .type {
-    background-color: #5DE0C7;
+    background-color: #4ab4a1;
     color: rgb( 255, 247, 218);
     margin: .125rem;
     padding: .25rem .5rem;
