@@ -13,12 +13,12 @@ body {
 header {
     background-color: white;
     width: 100%;
-    order: 1; /* Altere a ordem para que o header fique abaixo do conteúdo */
+    order: 1;
 }
 
 header img {
-    display: block; /* Para garantir que a imagem não seja exibida como inline */
-    margin: 0 auto; /* Centralize a imagem horizontalmente */
+    display: block;
+    margin: 0 auto;
     padding-top: 0.1rem;
 }
 
@@ -29,7 +29,7 @@ header img {
     padding: 1rem;
     height: 100vh;
     width: 100vw;
-    order: 2; /* Defina a ordem para que o conteúdo fique acima do header */
+    order: 2;
 }
 
 @media screen and (min-width: 992px) {

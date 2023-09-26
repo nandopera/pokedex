@@ -1,0 +1,30 @@
+.modal {
+    /* display: grid;
+    grid-template-columns: minmax(20px 1fr); */
+    border-radius: .8rem;
+    border-style: none;
+    min-width: 180px;
+    max-width: 50%;
+    max-height: 100vh;
+    margin: auto auto;
+    padding: 2rem 1rem 1rem 1rem;
+}
+
+.modal-style>h2 {
+    margin: .5rem 0 .5rem 0;
+}
+
+.modal-style {
+    display: grid;
+    grid-template-columns: minmax(1fr 1fr);
+}
+
+#closeModal {
+    position: absolute;
+    width: 1.25rem;
+    border-radius: 50%;
+    margin: -1.3rem 0 1rem 0;
+    border-style: none;
+    background: rgb(199, 81, 81);
+    cursor: pointer;
+}

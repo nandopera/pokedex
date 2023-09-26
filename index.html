@@ -12,18 +12,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500;700&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="/css/pokedex.css">
+    <link rel="stylesheet" href="/css/pokedetail.css">
     <title>Pokedex</title>
   </head>
   <body>
-    <!-- <header>
+    <header>
       <img
         src="https://user-images.githubusercontent.com/37731582/39395092-949193b4-4ada-11e8-9f21-c049a771bbcc.png"
         alt="Pokedex banner"
         srcset=""
         height="200px"
       />
-    </header> -->
-  
+    </header>
+    <div class="unsplash-img"></div>
     <section class="content">
       <h2>Pokedex</h2>
       <ol id="pokemonList" class="pokemons">
@@ -33,10 +34,21 @@
         <button id="loadMoreBtn" type="button">Load More</button>
       </div>
     </section>
+    
+    <dialog class="modal" id="modal">
+      <div class="modal-style">
+        <button id="closeModal">X</button>
+        <h2></h2>
+        <p>
+          
+        </p>
+      </div>
+    </dialog>
 
     <!-- Script JS -->
     <script src="/js/pokemon-model.js"></script>
     <script src="/js/poke-api.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/poke-details.js"></script>
   </body>
 </html>
