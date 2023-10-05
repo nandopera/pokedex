@@ -45,12 +45,23 @@ const callPokeDetail = document.querySelector(".pokemon-item");
     modal.showModal();
   }
 }); */
+
 pokemonList.addEventListener("click", (e) => {
-  const clickedPokemonItem = e.target.closest(".pokemon-item");
-  if (clickedPokemonItem) {
-    modal.showModal();
+  const clickedShowDetailsButton = e.target.closest(".pokemon-item");
+  if (clickedShowDetailsButton) {
+    const clickedPokemonItem =
+      clickedShowDetailsButton.closest(".pokemon-item");
+    const pokemonId = clickedPokemonItem.dataset.id;
+    loadPokemonDetails(pokemonId);
   }
 });
+
+// pokemonList.addEventListener("click", (e) => {
+//   const clickedPokemonItem = e.target.closest(".pokemon-item");
+//   if (clickedPokemonItem) {
+//     modal.showModal();
+//   }
+// });
 
 closeModalButton.addEventListener('click', () => {
   modal.close();
@@ -60,33 +71,40 @@ const modalTitle = document.querySelector("#modal h2");
 const modalDescription = document.querySelector("#modal p");
 
 // Função para carregar detalhes de um Pokémon no modal
-function loadPokemonDetails(pokemon) {
-  // Atualize o título do modal
-  modalTitle.textContent = pokemon.name;
+// function loadPokemonDetails(pokemon) {
+//   // Atualize o título do modal
+//   modalTitle.textContent = pokemon.name;
 
-  // Atualize a descrição do modal
-  modalDescription.textContent = pokemon.description;
+//   // Atualize a descrição do modal
+//   modalDescription.textContent = pokemon.description;
 
-  // Outras atualizações de elementos do modal, se necessário
-}
+//   // Outras atualizações de elementos do modal, se necessário
+// }
 
 function loadPokemonDetails(pokemonId) {
-  // Verifique se o Pokémon com o ID existe no objeto pokemonData
-  if (pokemonData[pokemonId]) {
-    const pokemon = pokemonData[pokemonId];
-
-    // Atualize o conteúdo do modal com os detalhes do Pokémon
-    modal.querySelector("h2").innerHTML = pokemon.name;
-    modal.querySelector("p").innerHTML = pokemon.description;
-    // Atualize outras informações do modal conforme necessário
-    
-
-    // Abra o modal
+  pokeApi.getPokemonDetailedInfo(pokemonId).then((pokemon) => {
+    modalTitle.textContent = pokemon.name;
+    modalDescription.textContent = `ID: ${pokemon.num}<br>Type: ${pokemon.type}<br>Description: ${pokemon.description}`;
     modal.showModal();
-  }
+  });
 }
 
 
+// function loadPokemonDetails(pokemonId) {
+//   // Verifique se o Pokémon com o ID existe no objeto pokemonData
+//   if (pokemonData[pokemonId]) {
+//     const pokemon = pokemonData[pokemonId];
+
+//     // Atualize o conteúdo do modal com os detalhes do Pokémon
+//     modal.querySelector("h2").innerHTML = pokemon.name;
+//     modal.querySelector("p").innerHTML = pokemon.description;
+//     // Atualize outras informações do modal conforme necessário
+    
+
+//     // Abra o modal
+//     modal.showModal();
+//   }
+// }
 
 loadPokemonItens(offset, limit);
 
